@@ -1,5 +1,5 @@
 from math import sqrt
-from tkinter.filedialog import askopenfilename
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,7 +13,7 @@ def emwa_chart(url):
     print(y_list)
     alpha = 0.2
     y_ewma, y_limit_up, y_limit_down = [], [], []
-    z_av = 30
+    z_av = sum(y_list) / len(y_list)
     for i in range(len(y_list)):
         if i == 0:
             y_ewma.append(alpha * y_list[i] + (1 - alpha) * z_av)
