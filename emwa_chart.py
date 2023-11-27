@@ -1,5 +1,4 @@
 from math import sqrt
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -19,7 +18,6 @@ def emwa_chart(url):
             y_ewma.append(alpha * y_list[i] + (1 - alpha) * z_av)
         else:
             y_ewma.append(alpha * y_list[i] + (1 - alpha) * y_ewma[i - 1])
-
     for i in range(len(y_list)):
         limit = 1.95 * 3 * sqrt(((alpha) / (2 - alpha)) * (1 - (1 - alpha) ** ((2 * (i + 1)))))
         y_limit_up.append(z_av + limit)
