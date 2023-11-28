@@ -1,5 +1,5 @@
 import pandas as pd
-import drow_chart
+import draw_chart
 
 
 def cusum(path_file):
@@ -32,5 +32,5 @@ def cusum(path_file):
         uc_list.append(max(0, uc_list[i - 1] + data_list[0][i] - w - u))
         lc_list.append(min(0, lc_list[i - 1] + data_list[0][i] + w - u))
 
-    drow_chart.draw_chart(points=uc_list, ucl=[UCL], lcl=[LCL], CL=0, name='CUSUM Chart', count=2)
-    drow_chart.draw_chart(points=lc_list, ucl=[UCL], lcl=[LCL], CL=0, name='CUSUM Chart', count=2)
+    draw_chart.draw_chart(points=uc_list, ucl=[UCL], lcl=[LCL], CL=0, name='CUSUM Chart', count=2)
+    draw_chart.draw_chart(points=lc_list, ucl=[UCL], lcl=[LCL], CL=0, name='CUSUM Chart', count=2)

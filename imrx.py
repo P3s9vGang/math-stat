@@ -1,5 +1,5 @@
 import pandas as pd
-import drow_chart
+import draw_chart
 
 
 def imrx(path_file):
@@ -22,5 +22,5 @@ def imrx(path_file):
     LCLx = CL - E2 * imr_avg
     UCLmr = D4 * imr_avg
     LCLmr = D3 * imr_avg
-    drow_chart.draw_chart(points=data_list[0], ucl=[UCLx], lcl=[LCLx], CL=CL, name='I-Chart')
-    drow_chart.draw_chart(points=imr_list, ucl=[UCLmr], lcl=[LCLmr], CL=imr_avg, name='MR-Chart', shift=1, start=1)
+    draw_chart.draw_chart(points=data_list[0], ucl=[UCLx], lcl=[LCLx], CL=CL, name='I-Chart')
+    draw_chart.draw_chart(points=imr_list, ucl=[UCLmr], lcl=[LCLmr], CL=imr_avg, name='MR-Chart', shift=1, start=1)

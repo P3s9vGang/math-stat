@@ -1,7 +1,7 @@
 from math import sqrt
 import numpy as np
 import pandas as pd
-import drow_chart
+import draw_chart
 
 
 def emwa(path_file):
@@ -23,4 +23,4 @@ def emwa(path_file):
         y_limit_up.append(z_av + limit)
         y_limit_down.append(z_av - limit)
 
-    drow_chart.draw_chart(points=y_ewma, ucl=y_limit_up, lcl=y_limit_down, CL=z_av, name='EWMA Chart')
+    draw_chart.draw_chart(points=y_ewma, ucl=y_limit_up, lcl=y_limit_down, CL=z_av, name='EWMA Chart')

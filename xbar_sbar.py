@@ -1,7 +1,7 @@
 from math import sqrt
 import numpy as np
 import pandas as pd
-import drow_chart
+import draw_chart
 
 
 def xbar_sbar(path_file):
@@ -71,5 +71,5 @@ def xbar_sbar(path_file):
     UCLs = B4[len_subgroup - 2] * S
     LCLs = B3[len_subgroup - 2] * S
 
-    drow_chart.draw_chart(points=x_avg, ucl=[UCLx], lcl=[LCLx], CL=CL, name='X-bar Chart')
-    drow_chart.draw_chart(points=s_avg, ucl=[UCLs], lcl=[LCLs], CL=S, name='S Chart')
+    draw_chart.draw_chart(points=x_avg, ucl=[UCLx], lcl=[LCLx], CL=CL, name='X-bar Chart')
+    draw_chart.draw_chart(points=s_avg, ucl=[UCLs], lcl=[LCLs], CL=S, name='S Chart')

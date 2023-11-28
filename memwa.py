@@ -1,7 +1,7 @@
 from math import sqrt
 import numpy as np
 import pandas as pd
-import drow_chart
+import draw_chart
 
 
 def memwa(path_file):
@@ -59,4 +59,4 @@ def memwa(path_file):
             sigma_i = L * sigma_avg * sqrt(((lamda) / (2 - lamda)) * (1 - (1 - lamda) ** ((2 * (i + 1)))))
         ucl.append(T + sqrt(sigma_i))
         lcl.append(T - sqrt(sigma_i))
-    drow_chart.draw_chart(points=memwa_points, ucl=ucl, lcl=lcl, CL=T, name='MEWMA Chart')
+    draw_chart.draw_chart(points=memwa_points, ucl=ucl, lcl=lcl, CL=T, name='MEWMA Chart')
