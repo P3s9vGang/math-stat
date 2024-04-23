@@ -43,7 +43,7 @@ def draw_chart(points=[], ucl=[], lcl=[], CL=None, name='', shift=0, start=0, co
     plt.ylabel('Axe y', fontsize=16)
     plt.xlim([0.8, len(points) + 0.2])
     plt.title(name, fontsize=30)
-
+    plt.savefig('out//foo.png')
     if cnt == count:  # for multiple charts
         plt.show()
         cnt = 0
