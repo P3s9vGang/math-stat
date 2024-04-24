@@ -9,6 +9,7 @@ class xbar_r:
         global data_list, x_avg, r_avg, UCLx, LCLx, UCLr, LCLr
         data_list, x_avg, r_avg = [], [], []
         UCLx, LCLx, UCLr, LCLr = 0, 0, 0, 0
+
     def gen(self, path_file):
         global data_list, x_avg, r_avg, UCLx, LCLx, UCLr, LCLr
         table_excel = pd.read_excel(f'{path_file}')
@@ -40,23 +41,23 @@ class xbar_r:
         draw_chart.draw_chart(points=x_avg, ucl=[UCLx], lcl=[LCLx], CL=CL, name='X-bar Chart')
         draw_chart.draw_chart(points=r_avg, ucl=[UCLr], lcl=[LCLr], CL=R, name='R Chart', shift=1, start=1)
 
-        def xPoints(self):
-            return x_avg
+    def xPoints(self):
+        return x_avg
 
-        def rPoints(self):
-            return r_avg
+    def rPoints(self):
+        return r_avg
 
-        def allData(self):
-            return data_list, x_avg, r_avg, UCLx, LCLx, UCLr, LCLr
+    def allData(self):
+        return data_list, x_avg, r_avg, UCLx, LCLx, UCLr, LCLr
 
-        def xLimitUp(self):
-            return UCLx
+    def xLimitUp(self):
+        return UCLx
 
-        def xLimitDown(self):
-            return LCLx
+    def xLimitDown(self):
+        return LCLx
 
-        def rLimitUp(self):
-            return UCLr
+    def rLimitUp(self):
+        return UCLr
 
-        def rLimitDown(self):
-            return LCLr
+    def rLimitDown(self):
+        return LCLr
