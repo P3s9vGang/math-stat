@@ -1,5 +1,5 @@
-tmp/
 venv/
+tmp/
+sampledata/
+.gitignore
 out/
-*.pyc
-main.py
