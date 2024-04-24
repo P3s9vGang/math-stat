@@ -2,9 +2,6 @@ import pandas as pd
 import draw_chart
 
 
-
-
-
 class cusum:
 
     def __init__(self):
@@ -40,7 +37,6 @@ class cusum:
             lc_list.append(min(0, lc_list[i - 1] + data_list[0][i] + w - u))
         draw_chart.draw_chart(points=uc_list, ucl=[UCL], lcl=[LCL], CL=0, name='CUSUM Chart', count=2)
         draw_chart.draw_chart(points=lc_list, ucl=[UCL], lcl=[LCL], CL=0, name='CUSUM Chart', count=2)
-
 
     def allData(self):
         return uc_list, lc_list, UCL, LCL
